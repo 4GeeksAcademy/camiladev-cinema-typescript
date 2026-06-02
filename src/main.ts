@@ -64,3 +64,28 @@ function validarReserva(fila:number, asiento: number): void{
 asientosCine[fila - 1][asiento - 1] = 1;
 console.log(`✅Reserva confirmada para la fila ${fila}, asiento ${asiento}`);
 }
+
+// Contar el número de asientos reservados
+let asientosReservados = 0;
+
+for (let fila of asientosCine) {
+  for (let asiento of fila) {
+    if (asiento === 1) {
+      asientosReservados++;
+    }
+  }
+}
+console.log(`Número total de asientos reservados: ${asientosReservados}`);
+
+// Contar el número de asientos disponibles
+
+let asientosDisponibles = 0;
+
+for (let fila of asientosCine) {
+  for (let asiento of fila) {
+    if (asiento === 0) {
+      asientosDisponibles++;
+    }
+  }
+}
+console.log(`Número total de asientos disponibles: ${asientosDisponibles}`);
