@@ -1,12 +1,24 @@
-if (typeof document !== "undefined") {
-  import("./style.css").then(() => {
-    const app = document.querySelector<HTMLParagraphElement>("#app");
-    if (app) {
-      app.textContent = "If you can see this, Tailwind is working.";
-    }
-  });
-}
+// Crear la matriz
 
-console.log("Hello from src/main.ts");
+let asientosCine: number[][] = [];
+const filas = 8;
+const asientosPorFila = 10;
 
-export {};
+// Inicializar la matriz con asientos vacios
+
+for (let i = 0; i < filas; i++){ 
+  const fila: number[] = [];
+   for (let j = 0; j < asientosPorFila; j++){
+      fila.push(0);
+   }
+
+      asientosCine.push(fila);
+
+} 
+
+// Reservar asientos
+
+asientosCine [2][3] = 1;
+asientosCine [3][3] = 1;
+
+
