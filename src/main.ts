@@ -20,6 +20,24 @@ for (let i = 0; i < filas; i++){
 
 asientosCine [2][3] = 1;
 asientosCine [3][3] = 1;
+asientosCine [4][3] = 1;
+asientosCine [5][3] = 1;
+asientosCine [6][3] = 1;
+asientosCine [7][3] = 1;
+asientosCine [2][4] = 1;
+asientosCine [3][4] = 1;
+asientosCine [4][4] = 1;
+asientosCine [5][4] = 1;
+asientosCine [6][4] = 1;
+asientosCine [7][4] = 1;
+asientosCine [2][5] = 1;
+asientosCine [3][5] = 1;
+asientosCine [4][5] = 1;
+asientosCine [5][5] = 1;
+asientosCine [6][5] = 1;
+asientosCine [7][5] = 1;
+asientosCine [2][3] = 0;
+
 
 // Visualizar la matriz y convertir los numeros a letras
 
@@ -31,3 +49,18 @@ asientosCine.forEach((fila,i) => {
   })
     console.log(`Fila ${i + 1}: ${cambiarNumeroPorLetra.join(" ")}`);
  }); 
+
+//  Función que valida las reservas
+
+function validarReserva(fila:number, asiento: number): void{
+  if (fila < 1 || fila > filas || asiento < 1 || asiento > asientosPorFila) {
+    console.log("❌Número de fila o asiento inválido.");
+    return;
+  } 
+  if (asientosCine[fila - 1][asiento - 1] === 1) {
+    console.log("❌El asiento ya está reservado.");
+    return;
+  } 
+asientosCine[fila - 1][asiento - 1] = 1;
+console.log(`✅Reserva confirmada para la fila ${fila}, asiento ${asiento}`);
+}
