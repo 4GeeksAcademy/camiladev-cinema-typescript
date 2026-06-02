@@ -89,3 +89,15 @@ for (let fila of asientosCine) {
   }
 }
 console.log(`Número total de asientos disponibles: ${asientosDisponibles}`);
+
+// corroborar si el asiento está reservado o no
+
+// console.log("El asiento de la fila 6, asiento 4 está reservado?", asientosCine [7][5]);
+
+// MEJOR FORMA DE CORROBORAR SI EL ASIENTO ESTÁ RESERVADO O NO
+
+validarReserva(6, 4);
+validarReserva(2, 3);
+
+ 
+  // console.log("El asiento de la fila 1, asiento 2 está reservado?", asientosCine [1][2]);
