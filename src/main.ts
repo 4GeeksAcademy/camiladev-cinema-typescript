@@ -21,4 +21,13 @@ for (let i = 0; i < filas; i++){
 asientosCine [2][3] = 1;
 asientosCine [3][3] = 1;
 
+// Visualizar la matriz y convertir los numeros a letras
 
+console.log("MAPA DE LA SALA");
+
+asientosCine.forEach((fila,i) => {
+  const cambiarNumeroPorLetra: string[] =  fila.map(asiento => {
+    return asiento === 0 ? "L" : "X";
+  })
+    console.log(`Fila ${i + 1}: ${cambiarNumeroPorLetra.join(" ")}`);
+ }); 
