@@ -158,16 +158,15 @@ validarReserva(2, 3);
   if (!contenedor) return;
   
   contenedor.innerHTML = "";
-  contenedor.className = "flex flex-col items-center justify-center p-6 gap-2";
+  contenedor.className = "flex flex-col items-center justify-center p-6 gap-2 w-full max-w-xs sm:max-w-xl mx-auto py-4";
 
   asientosCine.forEach((fila, i) => {
     const divFila = document.createElement("div");
-    divFila.className = "flex flex-row justify-center";
+    divFila.className = "flex flex-row flex-wrap justify-center w-full";
 
     fila.forEach((valorNumerico, j) => {
       const boton = document.createElement("button");
-      const clasesBase = "w-11 h-11 m-1 rounded-md font-bold text-base transition-colors duration-200 cursor-pointer text-white flex items-center justify-center";
-
+      const clasesBase = "w-9 h-9 sm:w-11 sm:h-11 m-0.5 sm:m-1 rounded-md font-bold text-sm sm:text-base transition-colors duration-200 cursor-pointer text-white flex items-center justify-center";
       if (valorNumerico === 0) {
         boton.innerText = "L";
         boton.className = `${clasesBase} bg-[#2ec4b6] hover:bg-[#25a195]`;
