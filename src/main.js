@@ -122,7 +122,7 @@ function dibujarCineEnPantalla() {
     if (!contenedor)
         return;
     contenedor.innerHTML = "";
-    contenedor.className = "flex flex-col items-center justify-center p-6 gap-2 w-full max-w-xs sm:max-w-xl mx-auto py-4";
+    contenedor.className = "flex flex-col items-center justify-center p-6 gap-2 w-full max-w-xs sm:max-w-xl  mx-auto py-4";
     asientosCine.forEach(function (fila, i) {
         var divFila = document.createElement("div");
         divFila.className = "flex flex-row flex-wrap justify-center w-full";
@@ -144,7 +144,7 @@ function dibujarCineEnPantalla() {
                 }
                 // Si el asiento está ocupado, lo cancelamos al hacer clic
                 else {
-                    cancelarReserva(i + 1, j + 1);
+                    alert("❌ Este asiento ya está reservado. No puedes seleccionarlo.");
                 }
                 // Refrescamos la pantalla para ver el cambio de color al instante
                 dibujarCineEnPantalla();
